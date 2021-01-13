@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sandipan's Dictionary</title>
+</head>
+<body>
+	<div>
+		<center><h1>Dictionary</h1></center>
+		<hr>
+		<center>
+		<form action="" method="post">
+			<input type="text" name="word" placeholder="Search dictionary...">
+			<input type="submit" name="sm" value="Enter">
+		</form>
+		</center>
+	</div>
+	<br>
+	<div>
+		<b>MEANINGS</b>
+		<textarea style="color: black; width: 99.4%; resize: none;" rows="10" disabled>{% for i in MEANINGS %}{{i[0]+', '}}{{i[1]+', '}}&#13;&#10;{% for j in i[2] %}{{j}}{% endfor %}&#13;&#10;{% for jj in i[3] %}{{jj}}{% endfor %}&#13;&#10;&#8213;&#8213;&#8213;&#8213;&#8213;&#13;&#10;{% endfor %}</textarea>
+		<br>
+		<b>SYNONYMS</b>
+		<textarea style="color: black; width: 99.4%; resize: none;" rows="1" disabled>{% for i in SYNONYMS %}{{i+", "}}{%endfor%}</textarea>
+		<br>
+		<b>ANTONYMS</b>
+		<textarea style="color: black; width: 99.4%; resize: none;" rows="1" disabled>{% for i in ANTONYMS %}{{i+", "}}{%endfor%}</textarea>
+	</div>
+
+</body>
+</html>
